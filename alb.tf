@@ -29,7 +29,7 @@ resource "aws_lb_target_group_attachment" "attach-app" {
 }
 resource "aws_lb_listener" "alb-http-listener" {
     load_balancer_arn = aws_lb.application-lb.arn
-    port              = "80"
+    port              = 80
     protocol          = "HTTP"
   
     default_action {
